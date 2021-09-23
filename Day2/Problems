@@ -1,0 +1,38 @@
+let x = function(){
+   console.log("iam from x");
+};
+let y = function(callback) {
+  console.log("iam from Y");
+  callback();
+ }
+ 
+y(x);
+
+//add multiply
+
+let add = function(a,b){
+return a + b
+}
+
+let mul = function(a,b){
+return a * b
+}
+
+let result = function(a,b,callback){
+return callback(a,b);
+}
+result(2,2,add);
+
+//sort array
+
+let tree = [{num:1,type:"apple"},{num:3,type:"cat"},{num:2,type:"banana"}];
+tree.sort(function(val1,val2){
+if (val1.type < val2.type){
+return -1}
+else{
+return 1}});
+console.log(tree);
+
+
+
+
