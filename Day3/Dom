@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        .todo{
+            text-align: center;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="todo">
+        <h2>TODO</h2>
+       <form onsubmit="add()">
+        <input type="text" placeholder="name" id="inp" value="" >
+        <button type="submit" class="btn btn-primary" >Add</button>
+       </form>
+    </div>
+     <ol id="entry">
+         
+         
+     </ol>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+   
+    <script>
+        let inputfield = document.getElementById('inp');
+        let ol = document.getElementById('entry');
+        
+
+        function add() {
+            event.preventDefault();
+            let li = document.createElement("li");
+            li.innerHTML = ` <button type="button" class="btn-close me-2 m-auto" onclick = "del(this)" ></button>`
+            let text = document.createTextNode(inputfield.value);
+            li.appendChild(text);
+            ol.appendChild(li);
+            inputfield.value = ""
+            
+            
+        }
+        function del(item) {
+            item.parentNode.remove();
+            
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+    alert("DOM ready!");
+  });
+
+
+  window.onload = function() { 
+    
+    let net = navigator.onLine ? "Online" : "Offline";
+    alert('Page loaded and your status' + " " +net);
+
+    
+    
+  };
+  window.onbeforeunload = function() {
+    alert("There are unsaved changes. Leave now?");
+  };
+
+
+        
+
+
+    </script>
+  </body>
+</html>
