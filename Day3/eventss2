@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<button onclick="myFunction()">Try it</button><input type="button" onclick="countRabbits()" value="Count rabbits!"><input id="elem" type="button" value="Click me"/><button onmouseover="mousein()"  onmouseout="mouseout()">mouse</button>
+ <p id="demo"></p>
+     
+
+    </div>
+    <div class="newform">
+        <form onclick="alert('form')">FORM
+            <div onclick="alert('div')">DIV
+              <p onclick="alert('p')">P</p>
+              <button onclick="() => {
+                event.stopPropagation()}">Click me</button>
+                <button onclick="event.stopImmediatePropagation()">Click me</button>
+            </div>
+          </form>
+    </div>
+    <div >
+        <form class="new2" onclick="cap()">FORM
+            <div  class="new2">DIV
+              <p  class="new2">P</p>
+            </div>
+          </form>
+    </div>
+
+    <div>
+        <button onclick="even()">event</button>
+        Enter your name: <input type="text" id="fname" onkeyup="mykeys()" onkeydown="keydownFunction()">
+
+    </div>
+    <div class="formfields">
+        <form onsubmit="subform()">
+            <fieldset>
+              <legend>Personalia:</legend>
+              <label for="fname">First name:</label><br>
+              <input type="text" id="ffname" name="fname" placeholder="firstname"><br>
+              <label for="lname">Last name:</label><br>
+              <input type="text" id="lname" name="lname" placeholder="lastname"><br>
+              <input type="radio" id="html" name="fav_language" value="HTML" onclick="handleChange(this);">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS" onclick="handleChange(this);">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript" onclick="handleChange(this);">
+  <label for="javascript">JavaScript</label> <br>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" onchange="handleCheck(this)">
+  <label for="vehicle1"> I have a bike</label><br>
+  
+  
+    <textarea id="text" rows="4" cols="50" onchange="handleText()" placeholder="Describe yourself here..."></textarea>
+    <label for="cars">Choose a car:</label>
+<select id="cars" name="cars" onchange="handleselect()">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+
+              <input type="submit" value="Submit">
+              
+            </fieldset>
+          </form>
+    </div>  
+    <script>
+     function countRabbits() {
+    for(let i=1; i<=3; i++) {
+      alert("Rabbit number " + i);
+    }
+  }
+
+  elem.addEventListener("click", () => alert("eventListener"));
+  elem.addEventListener("mouseover", () => console.log("mouseupp"));
+
+  function mousein() {
+      console.log("mouse");
+  }
+  function mouseout() {
+    console.log("mouseout");
+}
+
+
+function cap() {
+    for(let elem2 of document.querySelectorAll('*')) {
+        elem2.addEventListener("click", e => alert(`Capturing: ${elem2.tagName}`), true);
+        elem2.addEventListener("click", e => alert(`Bubbling: ${elem2.tagName}`));
+      }
+    
+}
+    
+
+  function even() {
+    for(let i=1; i<=5; i++) {
+      alert("Rabbit number " + i);
+      const event = new Event("start");
+      document.addEventListener('start', ()=>{
+        alert("Start event triggered")
+      });
+       
+      if(i == 4){
+        document.dispatchEvent(event);
+      }
+    }
+  }
+
+  function mykeys() {
+    var x = document.getElementById("fname");
+    x.style.backgroundColor = "red";
+
+    x.value = x.value.toUpperCase();
+  }
+  function keydownFunction() {
+    document.getElementById("fname").style.backgroundColor = "green";
+  }
+
+  function handleselect() {
+    
+        var x = document.getElementById("cars").value;
+        localStorage.setItem("select",x);
+   
+        
+      
+      
+  }
+  function handleText() {
+      let text = document.getElementById('text').value;
+      localStorage.setItem("text",text);
+      
+  }
+  function subform() {
+      let fname = document.getElementById('ffname');
+      let lname = document.getElementById('lname');
+      let radio = localStorage.getItem("radio");
+      let select = localStorage.getItem("select");
+      let text = localStorage.getItem("text");
+      let yes = localStorage.getItem("true");
+
+      
+      alert(`
+      firstname = ${fname.value} 
+      lastname = ${lname.value} 
+      Language = ${radio} 
+      selected_Car = ${select}
+      textHere = ${text}
+      Do you Have Bike = ${yes}`);
+      localStorage.clear();
+
+      
+  }
+  function handleChange(src) {
+      
+    localStorage.setItem("radio",src.value);
+    }
+    function handleCheck(check) {
+        console.log(check.checked);
+        result = ""
+        if (check.checked) {
+            result = "yes"
+            
+        } else {
+            result = "No"
+            
+        }
+        localStorage.setItem("true",result);
+        
+
+        }
+     
+
+
+    </script>
+</body>
+
+</html>
