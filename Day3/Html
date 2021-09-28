@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/allinone.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Burger_King_logo_%281999%29.svg/2024px-Burger_King_logo_%281999%29.svg.png" alt="">
+            <div class="con__right">
+                <img src="/store-alt-solid.svg" alt="">
+                <h3>stores</h3>
+                <img src="/user-alt-solid.svg" alt="">
+                <h3>user</h3>
+                <img src="/shopping-cart-solid.svg" alt="" onclick="cart()">
+                <h3>cart</h3>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="slider">
+            <img src="https://burgerking-image.s3.amazonaws.com/products/Home/web/1x_web_20210903093752528064_1440x300jpg" width="100%" alt="">
+        </div>
+        <div class="main__content1">
+            <div class="head">
+                <h2>Menu</h2>
+            <h2>see All</h2>
+            </div>
+            <div class="main__img">
+                <div class="options">
+                    <img src="https://burgerking-image.s3.amazonaws.com/category/Home/web/1x_web_20201214092757042942_114x101png" alt="">
+                    <h3>Burger</h3>
+                </div>
+                <div class="options">
+                    <img src="https://burgerking-image.s3.amazonaws.com/category/Home/web/1x_web_20210919155700560846_114x101png" alt="">
+                    <h3>Burger</h3>
+                </div>
+                <div class="options">
+                    <img src="https://burgerking-image.s3.amazonaws.com/category/Home/web/1x_web_20201214094752825353_114x101png" alt="">
+                    <h3>Burger</h3>
+                </div>
+                <div class="options">
+                    <img src="https://burgerking-image.s3.amazonaws.com/category/Home/web/1x_web_20210427112221790841_114x101png" alt="">
+                    <h3>Burger</h3>
+                </div>
+                <div class="options">
+                    <img src="https://burgerking-image.s3.amazonaws.com/category/Home/web/1x_web_20210427112037534695_114x101png" alt="">
+                    <h3>Burger</h3>
+                </div>
+                <div class="options">
+                    <img src="https://burgerking-image.s3.amazonaws.com/category/Home/web/1x_web_20210813044722998596_114x101png" alt="">
+                    <h3>Burger</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="main__content2">
+            <h2 class="main__h2">Offers</h2>
+            <div class="rows1">
+                <img src="https://burgerking-image.s3.amazonaws.com/16176883571x1119x540jpg" alt=""><img src="https://burgerking-image.s3.amazonaws.com/16306616351x1119x540jpg" alt="">
+            </div>
+        </div>
+        <div class="main__content3">
+            <h2 class="main__h2">Burgers</h2>
+            <div class="flex__rows">
+                <div class="main__card">
+                    <img src="https://burgerking-image.s3.amazonaws.com/products/Home/web/2x_web_20210430080827209214_262x360jpg" alt="">
+                    <div class="main__card__right">
+                        <h2>Burger veg</h2>
+                        <code>Crispy veg patty burger, our best seller.</code>
+                        <div class="card_-price">
+                            <h3>150</h3>
+                        <button >Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__card">
+                    <img src="https://burgerking-image.s3.amazonaws.com/products/Home/web/2x_web_20210430065825460098_262x360jpg" alt="">
+                    <div class="main__card__right">
+                        <h2>Fries</h2>
+                        <code>Crispy fries, our best seller.</code>
+                        <div class="card_-price">
+                            <h3>99</h3>
+                            <button >Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__card">
+                    <img src="https://burgerking-image.s3.amazonaws.com/products/Home/web/2x_web_20201203112052742554_262x360jpg" alt="">
+                    <div class="main__card__right">
+                        <h2>Burger veg</h2>
+                        <code>Crisp burger, our best seller.</code>
+                        <div class="card_-price">
+                            <h3>200</h3>
+                            <button >Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__card">
+                    <img src="https://burgerking-image.s3.amazonaws.com/products/Home/web/2x_web_CrispyVeg262x360.jpg" alt="">
+                    <div class="main__card__right">
+                        <h2>Burger veg chess</h2>
+                        <code>Crispy veg patty cheesy burger, our best seller.</code>
+                        <div class="card_-price">
+                            <h3>200</h3>
+                            <button >Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__card">
+                    <img src="https://burgerking-image.s3.amazonaws.com/products/Home/web/2x_web_20210820040218173964_262x360jpg" alt="">
+                    <div class="main__card__right">
+                        <h2>Burger veg</h2>
+                        <code>Crispy veg patty burger, our best seller.</code>
+                        <div class="card_-price">
+                            <h3>60</h3>
+                            <button >Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__card">
+                    <img src="https://burgerking-image.s3.amazonaws.com/products/Home/web/2x_web_20210223173214647703_262x360jpg" alt="">
+                    <div class="main__card__right">
+                        <h2 class="title">Whoppers</h2>
+                        <code>Crispy burger Whoppers, our best seller.</code>
+                        <div class="card_-price">
+                            <h3 id="price">250</h3>
+                            <button >Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer>
+        <h3>All rights reserved syam.</h3>
+    </footer>
+    <script src="/allinone.js"></script>
+</body>
+</html>
